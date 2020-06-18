@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600&display=swap');
+@import "./custom.scss";
+@import "~bootstrap/scss/bootstrap";
+
+h1, h2, h3, p, label, button {
+    font-family: 'Roboto Slab', serif;
+}
+
+body {
+    background-color: $light-grey;
+}
+
+.about-me, .resume {
+    background-color: $grey;
+}
+
+.get-in-touch {
+    background-color: $secondarySiteColor;
+    color: $white;
+}
+
+.footer {
+    background-color: $primarySiteColor;
+}
+
+.projects {
+    background-color: $primarySiteColor;
+    color: $white;
+}
+
+.project-image-wrapper {
+    max-width: 760px;
+    margin: auto;
+}
+
+.spacer {
+    color: #BBB;
+    width: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+.custom-shadow {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+                0 2px 2px rgba(0,0,0,0.12), 
+                0 4px 4px rgba(0,0,0,0.12), 
+                0 8px 8px rgba(0,0,0,0.12),
+                0 16px 16px rgba(0,0,0,0.12);
+}
+
+.project-card {
+    color: $black;
+    margin-bottom: 30px;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    &:hover {
+        @extend .custom-shadow;
+    }
+}
+
+.carousel-caption {
+    background-color: rgba(0,0,0,0.4);
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    padding: 15px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.4);
+    background-size: 20px 20px;
+}
+
+.carousel-item img {
+    // box-shadow: 0 1px 1px rgba(0,0,0,0.4);
+    border-radius: 5px;
+    border: 1px solid $grey;
+}

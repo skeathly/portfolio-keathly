@@ -1,24 +1,95 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+
+import AboutMe from './components/AboutMe';
+import Footer from './components/Footer';
+import GetIntouch from './components/GetInTouch';
+import Navigation from './components/Navigation';
+import ParticlesHeader from './components/ParticlesHeader';
+import ProjectBlock from './components/ProjectBlock';
+import Resume from './components/Resume';
+
+interface IProject {
+  id: number;
+  target: string;
+  img: string;
+  alt: string;
+}
+
+const projects: IProject[] = [
+  {
+    id: 1,
+    target: '/project/ameriprise',
+    img: './images/logo-ameriprise.png',
+    alt: 'Ameriprise Logo'
+  },
+  {
+    id: 2,
+    target: '/project/lhi',
+    img: './images/logo-lhi.png',
+    alt: 'LHI Logo'
+  },
+  {
+    id: 3,
+    target: '/project/customguide',
+    img: './images/logo-customguide.png',
+    alt: 'CustomGuide Logo'
+  },
+  {
+    id: 4,
+    target: '/project/microsoft',
+    img: './images/logo-microsoft.png',
+    alt: 'Microsoft Logo'
+  },
+  {
+    id: 5,
+    target: '/project/target',
+    img: './images/logo-target.png',
+    alt: 'Target Logo'
+  },
+  {
+    id: 6,
+    target: '/project/syncada',
+    img: './images/logo-syncada.png',
+    alt: 'Syncada Logo'
+  },
+  {
+    id: 7,
+    target: '/project/socialu',
+    img: './images/logo-socialu.png',
+    alt: 'SocialU Logo'
+  },
+  {
+    id: 8,
+    target: '/project/perficient',
+    img: './images/logo-perficient.png',
+    alt: 'Perficient Logo'
+  },
+]
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation />
+      <ParticlesHeader />
+      <AboutMe />
+
+      <section className="projects pt-4 pb-4">
+        <Container>
+          <h2 className="mb-3">Past Projects</h2>
+          <Row>
+            {
+              projects.map(project => <ProjectBlock key={project.id} project={project} />)
+            }
+          </Row>
+        </Container>
+      </section>
+
+      <Resume />
+      <GetIntouch />
+      <Footer />
     </div>
   );
 }
