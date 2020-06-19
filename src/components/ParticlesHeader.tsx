@@ -5,9 +5,9 @@ import config from './particle-config';
 
 const ParticlesHeader = () => {
     return (
-        <header style={{ height: '420px', overflow: 'hidden', position: 'relative' }}>
+        <header className="particle-header">
 
-            <Container className="mt-4" style={{ backgroundColor: 'transparent', position: 'relative', color: '#FFF', zIndex: 4 }}>
+            <Container className="mt-4 particle-container">
                 <h1>Mobile first web development with HTML, CSS, JavaScript, WordPress and more.</h1>
                 <p className="lead">
                     My name is Stan Keathly. I'm a frontend developer / designer based in Minneapolis, MN and I'd like to help you build your next project.

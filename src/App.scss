@@ -2,16 +2,30 @@
 @import "./custom.scss";
 @import "~bootstrap/scss/bootstrap";
 
-h1, h2, h3, p, label, button {
+h1, h2, h3, p, label, button, .badge {
     font-family: 'Roboto Slab', serif;
 }
 
 body {
-    background-color: $light-grey;
+    background-color: $tertiarySiteColor !important;
 }
 
-.about-me, .resume {
-    background-color: $grey;
+.navbar {
+    background-color: $secondarySiteColor;
+    border-bottom: 1px solid $primarySiteColor;
+}
+
+.particle-header {
+    height: 360px; 
+    overflow: hidden;
+    position: relative;
+}
+
+.particle-container {
+    background-color: transparent;
+    position: relative;
+    color: $white;
+    z-index: 4;
 }
 
 .get-in-touch {
@@ -21,6 +35,7 @@ body {
 
 .footer {
     background-color: $primarySiteColor;
+    color: $white;
 }
 
 .projects {
@@ -72,7 +87,13 @@ body {
 }
 
 .carousel-item img {
-    // box-shadow: 0 1px 1px rgba(0,0,0,0.4);
     border-radius: 5px;
     border: 1px solid $grey;
+}
+
+.tag {
+    margin-right: 8px;
+    height: 1.8em;
+    line-height: 1.4em;
+    margin-bottom: 8px
 }

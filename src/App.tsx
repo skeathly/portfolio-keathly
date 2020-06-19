@@ -9,7 +9,6 @@ import GetIntouch from './components/GetInTouch';
 import Navigation from './components/Navigation';
 import ParticlesHeader from './components/ParticlesHeader';
 import ProjectBlock from './components/ProjectBlock';
-import Resume from './components/Resume';
 
 interface IProject {
   id: number;
@@ -87,7 +86,6 @@ function App() {
         </Container>
       </section>
 
-      <Resume />
       <GetIntouch />
       <Footer />
     </div>

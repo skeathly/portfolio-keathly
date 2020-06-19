@@ -20,7 +20,7 @@ export default {
             "enable": false
         },
         "opacity": {
-            "value": 0.4
+            "value": 0.3
         },
         "move": {
             "speed": 4,
@@ -39,34 +39,33 @@ export default {
             ],
             "image": [
                 {
-                    "src": "logos/javascript-logo.svg",
-                    "width": 100,
-                    "height": 91
-                },
-                {
-                    "src": "logos/react-logo.svg",
-                    "width": 100,
-                    "height": 91
-                },
-                {
                     "src": "logos/angular-logo.svg",
                     "height": 100,
                     "width": 100
-                },
-                {
+                }, {
+                    "src": "logos/javascript-logo.svg",
+                    "width": 100,
+                    "height": 91
+                }, {
+                    "src": "logos/react-logo.svg",
+                    "width": 100,
+                    "height": 91
+                }, {
                     "src": "logos/vue-logo.svg",
                     "height": 100,
                     "width": 100
-                },
-                {
+                }, {
+                    "src": "logos/sass-logo.svg",
+                    "width": 120,
+                    "height": 100
+                }, {
                     "src": "logos/svelte-logo.svg",
                     "width": 100,
                     "height": 120
-                },
-                {
+                }, {
                     "src": "logos/webpack-logo.svg",
                     "width": 100,
-                    "height": 110
+                    "height": 116
                 }
             ]
         },

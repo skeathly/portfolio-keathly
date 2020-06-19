@@ -56,7 +56,7 @@ const GetInTouch = () => {
         <section className="get-in-touch pt-4 pb-5">
             <Container>
                 <h2>Get in Touch</h2>
-                <p>If you'd like to discuss a project or simply have a query, send me a direct message using the contact form.</p>
+                <p>Send me a direct message using the contact form below.</p>
 
                 <Form noValidate validated={validated} onSubmit={handleSubmit}>
                     <Form.Group controlId="fullName">
