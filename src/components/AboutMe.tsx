@@ -19,7 +19,7 @@ const AboutMe = () => {
                         </p>
                     </Col>
                     <Col md={4}>
-                        <Image src="./images/selfie.jpg" alt="Portrait of Stan Keathly" rounded fluid />
+                        <Image src="./images/selfie.jpg" rounded fluid />
                     </Col>
                 </Row>
             </Container>
