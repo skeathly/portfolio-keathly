@@ -29,6 +29,7 @@ const GetInTouch = () => {
     const handleFormSend = () => {
         fetch('https://formsubmit.co/ajax/skeathly@gmail.com', {
             method: 'POST',
+            mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json',
             },
