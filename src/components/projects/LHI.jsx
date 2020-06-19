@@ -27,7 +27,7 @@ const LHI = () => {
                     with these upgrades.
                 </li>
                 <li>
-                    Worked collaboratively with the UX team to implement new features and address backlog items.
+                    Worked collaboratively with the <abbr title="User Experience">UX</abbr> team to implement new features and address backlog items.
                 </li>
             </ul>
         </>

@@ -1,7 +1,7 @@
 export default {
     "background": {
         "color": {
-            "value": "#333333"
+            "value": "#457B9D"
         },
         "size": "cover"
     },

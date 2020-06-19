@@ -49,10 +49,10 @@ const Ameriprise = () => {
             <h3>Ameriprise Advisors<small> (ameripriseadvisors.com)</small></h3>
             <p><strong>Front End Developer</strong> <span class="spacer">|</span> April 2020 – July 2020</p>
             <ul>
-                <li>Was brought into the project to address concerns with 508 and WCAG compliance issues.</li>
+                <li>Was brought into the project to address concerns with 508 and <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> compliance issues.</li>
                 <li>Overhauled the site tab order flow to enhance natural user workflow.</li>
                 <li>Updated non-accessible components that had been utilized including auto-suggest, dropdowns, and range sliders and others.</li>
-                <li>In the process of these updates there was a good number of UI updates that where also implemented.</li>
+                <li>In the process of these updates there was a good number of <abbr title="User Interface">UI</abbr> updates that where also implemented.</li>
             </ul>
         </>
     )

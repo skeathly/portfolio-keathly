@@ -1,10 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap');
 @import "./custom.scss";
 @import "~bootstrap/scss/bootstrap";
 
-h1, h2, h3, p, label, button, .badge {
+h1, h2, h3, p, a, label, button, .badge {
     font-family: 'Roboto Slab', serif;
 }
+
+a {
+    text-decoration:none;
+    box-shadow: inset 0 -2px 0 rgba($primarySiteColor, 0.8);
+    color: $secondarySiteColor;
+    transition: all 0.5s;
+
+    &:hover {
+        background: rgba($primarySiteColor, 0.3);
+        text-decoration: none;
+        color: $secondarySiteColor;
+    }
+}
+
 
 body {
     background-color: $tertiarySiteColor !important;
@@ -92,8 +106,33 @@ body {
 }
 
 .tag {
+    font-weight: 300;
     margin-right: 8px;
     height: 1.8em;
     line-height: 1.4em;
     margin-bottom: 8px
+}
+
+hr {
+    border-color: $medium-grey;
+}
+
+.social {
+    text-align: right;
+
+    a {
+        color: $secondarySiteColor;
+        font-size: 28px;
+        margin-left: 10px;
+        box-shadow: none;
+
+        svg {
+            vertical-align: top;
+        }
+
+        &:hover {
+            color: $primarySiteColor;;
+            background: none;
+        }
+    }
 }

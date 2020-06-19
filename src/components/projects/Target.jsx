@@ -29,9 +29,8 @@ const Target = () => {
                     Utilized the JIRA platform to keep track of development and defects.
                 </li>
                 <li>
-                    Collaborated with remote development teams (Front End / Back End), UX
-                    Strategists, Business Analysts, and Designers to move Target platform
-                    forward.
+                    Collaborated with remote development teams (Front End / Back End), <abbr title="User Experience">UX</abbr> Strategists,
+                    Business Analysts, and Designers to move Target platform forward.
                 </li>
             </ul>
         </>

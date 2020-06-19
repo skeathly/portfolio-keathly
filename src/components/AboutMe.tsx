@@ -1,14 +1,15 @@
 import React from "react";
 import { Row, Col, Container, Image, Button, Badge } from 'react-bootstrap';
+import { IoIosMail, IoLogoLinkedin, IoLogoGithub } from 'react-icons/io';
 
 const AboutMe = () => {
-    const openPDF = () => {
-        var newWindow = window.open('http://stankeathly.com/assets/documents/stan-keathly-resume.pdf');
+    const openResume = () => {
+        var newWindow = window.open('./documents/stan-keathly-resume.pdf');
         newWindow.opener = null;
     }
 
     const tags = ["Angular", "AngularJS", "Bootstrap", "Git", "Headless", "JAM Stack", "jQuery", "NextJS", "Node", "NPM", "React", "Responsive Design", "REST", "Svelte", "TypeScript", "VueJS",
-        "Web Applications", "Web Components", "Webpack", "HTML5", "CSS3", "SASS"]
+        "Web Applications", "Web Components", "Webpack", "HTML5", "CSS3", "SASS", "WCAG compliance"]
 
     return (
         <section className="about-me pt-4 pb-4">
@@ -33,7 +34,7 @@ const AboutMe = () => {
                             {
                                 tags.map((tag, index) => {
                                     return (
-                                        <span><Badge pill variant="secondary" key={index} className="tag">{tag}</Badge></span>
+                                        <Badge pill variant="secondary" key={index} className="tag">{tag}</Badge>
                                     )
                                 })
                             }
@@ -41,11 +42,28 @@ const AboutMe = () => {
 
                         <hr />
 
-                        <p>Click below to view my resume.</p>
-                        <Button onClick={openPDF}>View PDF</Button>
+                        <p>Click to view my resume.</p>
+                        <Button onClick={openResume} className="mb-3">View Resume</Button>
                     </Col>
-                    <Col md={4}>
+                    <Col md={4} className="text-center">
                         <Image src="./images/selfie.jpg" alt="Stan Keathly" rounded fluid />
+
+                        <hr />
+
+                        <div className="social">
+                            <a href="mailto:skeathly@gmail.com?subject=Contact Form">
+                                <IoIosMail aria-hidden="true" />
+                                <span className="sr-only">Send me an email</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/stan-keathly" target="_blank" rel="noopener noreferrer">
+                                <IoLogoLinkedin />
+                                <span className="sr-only">Visit my LinkedIn page</span>
+                            </a>
+                            <a href="https://github.com/skeathly" target="_blank" rel="noopener noreferrer">
+                                <IoLogoGithub />
+                                <span className="sr-only">Visit my Github page</span>
+                            </a>
+                        </div>
                     </Col>
                 </Row>
             </Container>
