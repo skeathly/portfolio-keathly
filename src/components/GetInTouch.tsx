@@ -1,5 +1,6 @@
-import React, { FormEvent, useState } from "react";
+import React, { FormEvent, useState, useRef } from "react";
 import { Container, Form, Button, Alert } from 'react-bootstrap';
+import axios from 'axios';
 
 interface IForm {
     fullName: string;
@@ -10,7 +11,8 @@ interface IForm {
 const GetInTouch = () => {
     const [validated, setValidated] = useState(false);
     const [formSuccess, setFormSuccess] = useState(false);
-    const [formData, setFormData] = useState<IForm | null>({ fullName: "", email: "", message: "" });
+    const [formData, setFormData] = useState<IForm | null>(null);
+    const formRef = useRef(null);
 
     const handleSubmit = (ev: FormEvent<HTMLFormElement>) => {
         const form = ev.currentTarget;
@@ -27,17 +29,21 @@ const GetInTouch = () => {
     }
 
     const handleFormSend = () => {
-        fetch('https://formsubmit.co/ajax/skeathly@gmail.com', {
-            method: 'POST',
+        let formDetails = new FormData();
+        formDetails.append('fullName', formData.fullName);
+        formDetails.append('email', formData.email);
+        formDetails.append('message', formData.message);
+
+        let formConfig = {
             mode: 'no-cors',
             headers: {
-                'Content-Type': 'application/json',
+                "Content-Type": "application/x-www-form-urlencoded"
             },
-            body: JSON.stringify(formData)
-        })
-            .then(response => response.json())
-            .then(result => {
-                console.log('Success:', result);
+        }
+
+        axios.post('https://formsubmit.co/ajax/skeathly@gmail.com', formData, formConfig)
+            .then(response => {
+                console.log(response);
                 setFormSuccess(true);
                 setTimeout(() => {
                     setFormSuccess(false);
@@ -45,12 +51,13 @@ const GetInTouch = () => {
                 }, 8000);
             })
             .catch(error => {
-                console.error('Error:', error);
+                console.log(error);
             });
     }
 
     const handleFormReset = () => {
-        setFormData({ fullName: "", email: "", message: "" });
+        setValidated(false);
+        formRef.current.reset();
     }
 
     return (
@@ -59,7 +66,9 @@ const GetInTouch = () => {
                 <h2>Get in Touch</h2>
                 <p>Send me a direct message using the contact form below.</p>
 
-                <Form noValidate validated={validated} onSubmit={handleSubmit}>
+                <h3>{validated ? 'Validated' : 'Not Validated'}</h3>
+
+                <Form noValidate validated={validated} onSubmit={handleSubmit} ref={formRef}>
                     <Form.Group controlId="fullName">
                         <Form.Label>Full Name</Form.Label>
                         <Form.Control
