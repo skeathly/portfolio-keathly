@@ -52,6 +52,7 @@ const GetInTouch = () => {
             })
             .catch(error => {
                 console.log(error);
+                handleFormReset();
             });
     }
 
@@ -65,8 +66,6 @@ const GetInTouch = () => {
             <Container>
                 <h2>Get in Touch</h2>
                 <p>Send me a direct message using the contact form below.</p>
-
-                <h3>{validated ? 'Validated' : 'Not Validated'}</h3>
 
                 <Form noValidate validated={validated} onSubmit={handleSubmit} ref={formRef}>
                     <Form.Group controlId="fullName">
