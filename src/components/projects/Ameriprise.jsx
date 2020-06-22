@@ -47,7 +47,7 @@ const Ameriprise = () => {
             <hr />
 
             <h3>Ameriprise Advisors<small> (ameripriseadvisors.com)</small></h3>
-            <p><strong>Front End Developer</strong> <span class="spacer">|</span> April 2020 – July 2020</p>
+            <p><strong>Front End Developer</strong> <span className="spacer">|</span> April 2020 – July 2020</p>
             <ul>
                 <li>Was brought into the project to address concerns with 508 and <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> compliance issues.</li>
                 <li>Overhauled the site tab order flow to enhance natural user workflow.</li>

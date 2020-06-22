@@ -1,11 +1,26 @@
-import React from "react";
-import { Image } from 'react-bootstrap';
+import React, { Suspense } from "react";
+import { Spinner } from 'react-bootstrap';
+import { Img } from 'react-image';
+
+const ImgComponent = () => (
+    <Img
+        src={'/images/project-perficient.png'}
+        className="custom-shadow img-fluid rounded"
+        loader={
+            <Spinner animation="border" role="status">
+                <span className="sr-only">Loading...</span>
+            </Spinner>
+        }
+    />
+)
 
 const Perficient = () => {
     return (
         <>
-            <div className="project-image-wrapper mb-4">
-                <Image className="custom-shadow" src="/images/project-perficient.png" alt="Pradium website" rounded fluid />
+            <div className="project-image-wrapper mb-4 text-center">
+                <Suspense>
+                    <ImgComponent />
+                </Suspense>
             </div>
 
             <hr />
