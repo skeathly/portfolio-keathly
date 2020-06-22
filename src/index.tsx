@@ -1,10 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, BrowserRouter as Router } from 'react-router-dom'
-import './index.css';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import ProjectPage from './components/ProjectPage';
 import * as serviceWorker from './serviceWorker';
+import WebFontLoader from 'webfontloader';
+
+WebFontLoader.load({
+  google: {
+    families: [
+      'Roboto Slab:300,400:latin-ext'
+    ]
+  }
+})
 
 const routing = (
   <Router>
