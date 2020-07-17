@@ -1,8 +1,6 @@
 import React from 'react';
 import './App.scss';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-
+import { Container, Row } from 'react-bootstrap';
 import AboutMe from './components/AboutMe';
 import Footer from './components/Footer';
 import GetIntouch from './components/GetInTouch';

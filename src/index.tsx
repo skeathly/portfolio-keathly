@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, BrowserRouter as Router } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import App from './App';
 import ProjectPage from './components/ProjectPage';
 import * as serviceWorker from './serviceWorker';
 import WebFontLoader from 'webfontloader';
+import NoMatchPage from './components/NoMatchPage';
 
 WebFontLoader.load({
   google: {
@@ -16,10 +17,11 @@ WebFontLoader.load({
 
 const routing = (
   <Router>
-    <div>
+    <Switch>
       <Route path="/" exact component={App} />
       <Route path="/project/:id" component={ProjectPage} />
-    </div>
+      <Route component={NoMatchPage} />
+    </Switch>
   </Router>
 )
 
