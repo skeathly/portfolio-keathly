@@ -44,7 +44,7 @@ const AboutMe = () => {
 
                         <p>Click to view my resume.</p>
                         <Button onClick={openResume} className="mb-3">View Resume</Button>
-                        <hr class="d-block d-md-none">
+                        <hr class="d-block d-md-none" />
                     </Col>
                     <Col md={4} className="text-center">
                         <Image src="./images/selfie.jpg" alt="Stan Keathly" rounded fluid />
