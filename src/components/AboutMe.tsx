@@ -8,8 +8,8 @@ const AboutMe: React.FC = () => {
         newWindow.opener = null;
     }
 
-    const tags = ["Angular", "AngularJS", "Bootstrap", "Git", "Headless", "JAM Stack", "jQuery", "NextJS", "Node", "NPM", "React", "Responsive Design", "REST", "Svelte", "TypeScript", "VueJS",
-        "Web Applications", "Web Components", "Webpack", "HTML5", "CSS3", "SASS", "WCAG compliance"]
+    const tags = ["Angular", "AngularJS", "Bootstrap", "Express", "Git", "Headless", "JAM Stack", "jQuery", "NextJS", "Node", "NPM", "React", "React Native", "Redux", "Responsive Design", "REST", "Svelte", "TypeScript", "VueJS",
+        "Web Applications", "Web Components", "Webpack", "HTML5", "CSS3", "SASS", "WCAG Compliance"]
 
     return (
         <section className="about-me pt-4 pb-4">
@@ -44,6 +44,7 @@ const AboutMe: React.FC = () => {
 
                         <p>Click to view my resume.</p>
                         <Button onClick={openResume} className="mb-3">View Resume</Button>
+                        <hr className="d-block d-md-none" />
                     </Col>
                     <Col md={4} className="text-center">
                         <Image src="./images/selfie.jpg" alt="Stan Keathly" rounded fluid />
@@ -56,11 +57,11 @@ const AboutMe: React.FC = () => {
                                 <span className="sr-only">Send me an email</span>
                             </a>
                             <a href="https://www.linkedin.com/in/stan-keathly" target="_blank" rel="noopener noreferrer">
-                                <IoLogoLinkedin />
+                                <IoLogoLinkedin aria-hidden="true" />
                                 <span className="sr-only">Visit my LinkedIn page</span>
                             </a>
                             <a href="https://github.com/skeathly" target="_blank" rel="noopener noreferrer">
-                                <IoLogoGithub />
+                                <IoLogoGithub  aria-hidden="true" />
                                 <span className="sr-only">Visit my Github page</span>
                             </a>
                         </div>
