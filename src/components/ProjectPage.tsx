@@ -14,7 +14,7 @@ import SocialU from './projects/SocialU';
 import Syncada from './projects/Syncada';
 import Target from './projects/Target';
 
-const ProjectPage = () => {
+const ProjectPage: React.FC = () => {
     let { id } = useParams();
     let history = useHistory();
 

@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 import Particles from 'react-tsparticles';
 import config from './particle-config';
 
-const ParticlesHeader = () => {
+const ParticlesHeader: React.FC = () => {
     return (
         <header className="particle-header">
             <Container className="mt-5 particle-container">

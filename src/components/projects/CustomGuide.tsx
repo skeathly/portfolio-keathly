@@ -1,31 +1,38 @@
 import React from "react";
 import { Carousel } from 'react-bootstrap';
 
-const CustomGuide = () => {
-    const slides = [
-        {
-            id: 1,
-            img: '/images/project-customguide.png',
-            alt: 'First Slide',
-            description: 'CustomGuide catalog listing on the CustomGuide website.'
-        }, {
-            id: 2,
-            img: '/images/project-customguide-player.png',
-            alt: 'Second Slide',
-            description: 'Example screenshot in the process of wireframing out elearning player completion states screens in the new CustomGuide platform.'
-        }, {
-            id: 3,
-            img: '/images/project-customguide-tile-1.png',
-            alt: 'Third Slide',
-            description: 'Designed each tile image for the CustomGuide product catalog (Microsoft Outlook).'
-        }, {
-            id: 4,
-            img: '/images/project-customguide-tile-2.png',
-            alt: 'Fourth Slide',
-            description: 'Another example of tile image I designed for the CustomGuide product catalog (Microsoft Powerpoint).'
-        }
-    ];
+interface Slide {
+    id: number;
+    img: string;
+    alt: string;
+    description: string;
+}
 
+const slides: Slide[] = [
+    {
+        id: 1,
+        img: '/images/project-customguide.png',
+        alt: 'First Slide',
+        description: 'CustomGuide catalog listing on the CustomGuide website.'
+    }, {
+        id: 2,
+        img: '/images/project-customguide-player.png',
+        alt: 'Second Slide',
+        description: 'Example screenshot in the process of wireframing out elearning player completion states screens in the new CustomGuide platform.'
+    }, {
+        id: 3,
+        img: '/images/project-customguide-tile-1.png',
+        alt: 'Third Slide',
+        description: 'Designed each tile image for the CustomGuide product catalog (Microsoft Outlook).'
+    }, {
+        id: 4,
+        img: '/images/project-customguide-tile-2.png',
+        alt: 'Fourth Slide',
+        description: 'Another example of tile image I designed for the CustomGuide product catalog (Microsoft Powerpoint).'
+    }
+]
+
+const CustomGuide: React.FC = () => {
     return (
         <>
             <div className="project-image-wrapper mb-4">

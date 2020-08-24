@@ -1,26 +1,33 @@
 import React from "react";
 import { Carousel } from 'react-bootstrap';
 
-const Ameriprise = () => {
-    const slides = [
-        {
-            id: 1,
-            img: '/images/project-ameriprise-1.png',
-            alt: 'First Slide',
-            description: 'Tasked with 508 and WCAG compliance updates.'
-        }, {
-            id: 2,
-            img: '/images/project-ameriprise-2.png',
-            alt: 'Second Slide',
-            description: 'Several page components needed to be rewritten in order to make them properly accessible.'
-        }, {
-            id: 3,
-            img: '/images/project-ameriprise-3.png',
-            alt: 'Third Slide',
-            description: 'In addition to accessibility updates, there were a multitude of UI enhancements along the way.'
-        }
-    ];
+interface Slide {
+    id: number;
+    img: string;
+    alt: string;
+    description: string;
+}
 
+const slides: Slide[] = [
+    {
+        id: 1,
+        img: '/images/project-ameriprise-1.png',
+        alt: 'First Slide',
+        description: 'Tasked with 508 and WCAG compliance updates.'
+    }, {
+        id: 2,
+        img: '/images/project-ameriprise-2.png',
+        alt: 'Second Slide',
+        description: 'Several page components needed to be rewritten in order to make them properly accessible.'
+    }, {
+        id: 3,
+        img: '/images/project-ameriprise-3.png',
+        alt: 'Third Slide',
+        description: 'In addition to accessibility updates, there were a multitude of UI enhancements along the way.'
+    }
+]
+
+const Ameriprise: React.FC = () => {
     return (
         <>
             <div className="project-image-wrapper mb-4">

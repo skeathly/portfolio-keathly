@@ -1,7 +1,7 @@
 import React from "react";
 import { Nav, Navbar, Container } from 'react-bootstrap';
 
-const Navigation = () => {
+const Navigation: React.FC = () => {
     return (
         <>
             <Navbar collapseOnSelect expand="lg" variant="dark">

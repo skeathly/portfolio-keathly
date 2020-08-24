@@ -5,7 +5,7 @@ import { IconContext } from "react-icons";
 import { IoMdRefreshCircle } from "react-icons/io";
 import Navigation from './Navigation';
 
-const NoMatchPage = () => {
+const NoMatchPage: React.FC = () => {
     let history = useHistory();
 
     setTimeout(() => {

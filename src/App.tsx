@@ -78,7 +78,7 @@ function App() {
           <h2 className="mb-3">Past Projects</h2>
           <Row>
             {
-              projects.map(project => <ProjectBlock key={project.id} project={project} />)
+              projects.map(project => <ProjectBlock key={project.id} {...project} />)
             }
           </Row>
         </Container>

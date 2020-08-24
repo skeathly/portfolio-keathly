@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col, Container, Image, Button, Badge } from 'react-bootstrap';
 import { IoIosMail, IoLogoLinkedin, IoLogoGithub } from 'react-icons/io';
 
-const AboutMe = () => {
+const AboutMe: React.FC = () => {
     const openResume = () => {
         var newWindow = window.open('./documents/stan-keathly-resume.pdf');
         newWindow.opener = null;

@@ -8,11 +8,11 @@ interface IForm {
     message: string;
 }
 
-const GetInTouch = () => {
-    const [validated, setValidated] = useState(false);
-    const [formSuccess, setFormSuccess] = useState(false);
+const GetInTouch: React.FC = () => {
+    const [validated, setValidated] = useState<boolean>(false);
+    const [formSuccess, setFormSuccess] = useState<boolean>(false);
     const [formData, setFormData] = useState<IForm | null>(null);
-    const formRef = useRef(null);
+    const formRef = useRef<HTMLFormElement>(null);
 
     const handleSubmit = (ev: FormEvent<HTMLFormElement>) => {
         const form = ev.currentTarget;
@@ -43,7 +43,6 @@ const GetInTouch = () => {
 
         axios.post('https://formsubmit.co/ajax/skeathly@gmail.com', formData, formConfig)
             .then(response => {
-                console.log(response);
                 setFormSuccess(true);
                 setTimeout(() => {
                     setFormSuccess(false);
@@ -95,8 +94,14 @@ const GetInTouch = () => {
                     <Form.Group controlId="message">
                         <Form.Label>Message</Form.Label>
                         <Form.Control as="textarea"
+                            required
+                            minLength={10}
                             name="message"
+                            placeholder="Message"
                             onChange={e => setFormData({ ...formData, message: e.target.value })} />
+                        <Form.Control.Feedback type="invalid">
+                            Please enter at least 10 characters.
+                        </Form.Control.Feedback>
                     </Form.Group>
                     <Button className="mt-3" type="submit" variant="primary">Send a message</Button>
                 </Form>

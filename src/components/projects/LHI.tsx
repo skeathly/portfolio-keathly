@@ -2,24 +2,20 @@ import React, { Suspense } from "react";
 import { Spinner } from 'react-bootstrap';
 import { Img } from 'react-image';
 
-const ImgComponent = () => (
-    <Img
-        src={'/images/project-lhi.png'}
-        className="custom-shadow img-fluid rounded"
-        loader={
-            <Spinner animation="border" role="status">
-                <span className="sr-only">Loading...</span>
-            </Spinner>
-        }
-    />
-)
-
 const LHI = () => {
     return (
         <>
             <div className="project-image-wrapper mb-4 text-center">
-                <Suspense>
-                    <ImgComponent />
+                <Suspense fallback="Loading...">
+                    <Img
+                        src={'/images/project-lhi.png'}
+                        className="custom-shadow img-fluid rounded"
+                        loader={
+                            <Spinner animation="border" role="status">
+                                <span className="sr-only">Loading...</span>
+                            </Spinner>
+                        }
+                    />
                 </Suspense>
             </div>
 
