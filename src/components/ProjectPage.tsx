@@ -10,6 +10,7 @@ import CustomGuide from './projects/CustomGuide';
 import LHI from './projects/LHI';
 import Microsoft from './projects/Microsoft';
 import Perficient from './projects/Perficient';
+import RSM from './projects/RSM';
 import SocialU from './projects/SocialU';
 import Syncada from './projects/Syncada';
 import Target from './projects/Target';
@@ -30,6 +31,8 @@ const ProjectPage: React.FC = () => {
                 return <Microsoft />;
             case 'perficient':
                 return <Perficient />;
+            case 'rsm':
+                    return <RSM />;
             case 'socialu':
                 return <SocialU />;
             case 'syncada':
