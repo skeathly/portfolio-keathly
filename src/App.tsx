@@ -18,48 +18,54 @@ interface IProject {
 const projects: IProject[] = [
   {
     id: 1,
+    target: '/project/rsm',
+    img: './images/logo-rsm.png',
+    alt: 'RSM Logo'
+  },
+  {
+    id: 2,
     target: '/project/ameriprise',
     img: './images/logo-ameriprise.png',
     alt: 'Ameriprise Logo'
   },
   {
-    id: 2,
+    id: 3,
     target: '/project/lhi',
     img: './images/logo-lhi.png',
     alt: 'LHI Logo'
   },
   {
-    id: 3,
+    id: 4,
     target: '/project/customguide',
     img: './images/logo-customguide.png',
     alt: 'CustomGuide Logo'
   },
   {
-    id: 4,
+    id: 5,
     target: '/project/microsoft',
     img: './images/logo-microsoft.png',
     alt: 'Microsoft Logo'
   },
   {
-    id: 5,
+    id: 6,
     target: '/project/target',
     img: './images/logo-target.png',
     alt: 'Target Logo'
   },
   {
-    id: 6,
+    id: 7,
     target: '/project/syncada',
     img: './images/logo-syncada.png',
     alt: 'Syncada Logo'
   },
   {
-    id: 7,
+    id: 8,
     target: '/project/socialu',
     img: './images/logo-socialu.png',
     alt: 'SocialU Logo'
   },
   {
-    id: 8,
+    id: 9,
     target: '/project/perficient',
     img: './images/logo-perficient.png',
     alt: 'Perficient Logo'
