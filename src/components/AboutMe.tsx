@@ -48,10 +48,9 @@ const AboutMe: React.FC = () => {
         <Row>
           <Col md={8}>
             <p>
-              I'm a frontend developer, website designer, and web standards
-              enthusiast. I have over 10 years of experience designing and
-              building attractive, accesible websites and web applications for
-              clients big and small.
+              Front-end developer with over 15 years of experience developing
+              attractive, accesible websites and web applications for clients
+              big and small.
             </p>
             <p>
               I love to learn new things and am constantly striving to find
@@ -61,8 +60,8 @@ const AboutMe: React.FC = () => {
               spending time with my family.
             </p>
             <p>
-              Please have a look around my website, and get in touch if you
-              would like to work together on a project.
+              Please have a look around my site, and get in touch if you feel so
+              inclined.
             </p>
 
             <hr />
