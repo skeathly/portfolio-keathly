@@ -58,10 +58,14 @@ const GretchenSwanson: React.FC = () => {
       </h3>
       <p>
         <strong>Front End Developer</strong> <span className="spacer">|</span>
-        January 2021 – Current
+        January 2021 – December 2021
       </p>
       <ul>
-        <li>Coming Soon.</li>
+        <li>Utilized Angular and Angular Material UI components to create client application.</li>
+        <li>Integrated code to work with third party Umbraco plugin (Uintra) which allows the CMS to function as a headless application.<li>
+        <li>Worked closely with backend development team to integrate APIs into frontend application logic.<li>
+        <li>Developed interactive map application to keep track of client vendor details.</li>
+        <li>Created a set comprehesive dashboard components utilizing the Chart.js library to display key metrics for the client.</li>
       </ul>
     </>
   );
